@@ -1,0 +1,43 @@
+.title {
+    font-family: "Gowun Dodum", sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    background-color: rgb(194, 144, 255);
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 3px solid rgb(130, 37, 252)
+}
+.search {
+    font-family: "Gowun Dodum", sans-serif;
+    background-color: rgb(101, 175, 107);
+    width: 100%;
+    display: flex;
+    padding:15px;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: auto;
+    gap:10px;
+    border: 3px solid black;
+}
+.search label {
+    margin-bottom: 5px;
+}
+#searchBtn {
+    background-color: rgb(67, 98, 234);
+    color: white;
+}
+body {
+    background-color: rgb(116, 105, 182);
+    margin: 0;
+}
+.movieList {
+    display: grid;
+    justify-content: center;
+    gap:10px;
+    grid-template-columns:repeat(3, 1fr );
+    background-color: green;
+    text-align: center;
+    align-items: center;
+}
