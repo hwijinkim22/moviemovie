@@ -4,34 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href ="style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Movie Collection</title>
 
 </head>
 
-<body>
+ <body>
+    <header class="title">
+        <h2>🌠 평점 높은 영화 순위 🌠</h2>
+    </header>
 
-    <div class="title">
-        <h2>🌠 평점 높은 영화 순위 🌠</h2> 
-    </div> 
-
-    <div class="search">
+    <form class="search">
         <label>영화 검색:</label>
-        <input type="text" id="searchInput" placeholder = "영화 제목 입력" id ="placeholder">
-        <button type="submit" id = "searchBtn">검색</button>
-    </div>
+        <input type="text" id="searchInput" placeholder="영화 제목 입력" id="placeholder">
+        <button id="searchBtn">검색</button>
+    </form>
 
-    <section class = "movieList">
-        <div class = "movieCard" id = "100">
-        <img src ="https://media.themoviedb.org/t/p/w300_and_h450_bestv2/4z1VMmlxHrziG45901esjB4dpIa.jpg">
-        <h4 class ="movieTitle">고질라 x 콩: 뉴 엠파이어(2024)</h4>
-        <p></p>
-        <p></p>
+    <section class="movieList">
+        <div class="card" id = "card">
+            <img src="" id = "movieImg">
+            <movieId class="movieId"></movieId>
+            <h4 class="movieTitle"></h4>
+            <p class ="overView"></p>
+            <p class = "rating"></p>
         </div>
     </section>
 
-
+    <script src="main.js"></script>
 </body>
-<script src ="main.js"></script>
 
 </html>
