@@ -1,5 +1,9 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 .title {
-    font-family: "Gowun Dodum", sans-serif;
     font-size: 30px;
     font-weight: 800;
     background-color: rgb(194, 144, 255);
@@ -10,7 +14,6 @@
     border: 3px solid rgb(130, 37, 252)
 }
 .search {
-    font-family: "Gowun Dodum", sans-serif;
     background-color: rgb(101, 175, 107);
     width: 100%;
     display: flex;
@@ -36,8 +39,41 @@ body {
     display: grid;
     justify-content: center;
     gap:10px;
-    grid-template-columns:repeat(3, 1fr );
-    background-color: green;
+    grid-template-columns:repeat(4, 1fr );
+}
+.card {
+    width: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border: 3px ridge black;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white ;
+
+}
+.card h4, .card p {
+    margin:auto;
+}
+.movieTitle {
+    font-size: 28px;
+    font-weight: 900;
+    color: rgb(85, 85, 255);
     text-align: center;
-    align-items: center;
+}
+.overView {
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+.rating {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(255, 252, 78);
+    text-align: center;
+}
+.card img {
+    width: 100%;
+    max-height: 400px;
+    display:block;
 }
