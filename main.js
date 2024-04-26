@@ -14,16 +14,6 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', opti
         showMovieList(topMovies); // TMDB 사이트 result 배열 가져오기
     })
     .catch(err => console.error(err));
-// 검색 필터 기능 구현하기
-    const searchBtn = document.getElementById('searchBtn');
-    const searchInput = document.getElementById('searchInput')
-    
-    searchBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const val = searchInput.value.toLowerCase();
-        console.log(val);
-        showMovieList(val);
-    })
 
 
 // html에 영화 리스트 카드 만들기 
@@ -41,10 +31,35 @@ function showMovieList(movies) {
                         <p class="rating">👍평점:${movie.vote_average}</p>
                     </div>
                 </div>`;
-                // 영화 클릭 시 해당 영화 id 알럿창
-                movieCard.addEventListener('click', function () {
-                    alert("영화 ID=" + `${movie.id}`);
-                })
+        // 영화 클릭 시 해당 영화 id 알럿창
+        movieCard.addEventListener('click', function () {
+            alert("영화 ID=" + `${movie.id}`);
+        })
         movieListBox.appendChild(movieCard);
     })
 };
+
+
+// 필요한 변수들 선언하기
+const Cardlist = document.querySelectorAll('.movieList'); // 영화 리스트 지정
+const searchInput = document.getElementById('searchInput'); // 인풋창 지정
+const word = document.querySelector('.movieTitle');
+// 검색 인풋창 입력 시 이벤트 리스너 추가
+searchInput.addEventListener('input', function () {
+    const searchVal = searchInput.value.trim().toLowerCase(); // 밸류를 공백을 제거하고 소문자로 변환함
+    const filter = filters(searchVal); // 필터 해주는 변수 선언 
+});
+console.log("검색 이벤트리스너 부분 문제 없음")
+
+// 필터 함수 구현
+function filters(searchVal) {
+    const movieCards = document.querySelectorAll('.card');
+    movieCards.forEach(card => {
+        const title = card.querySelector('.movieTitle').textContent.toLowerCase(); // 영화 제목을 소문자로 변환하여 가져옴
+        if (title.includes(searchVal)) {
+            card.style.display = 'block'; // true = 해당 카드 출력
+        } else {
+            card.style.display = 'none'; // false = 이외 카드 숨김
+        }
+    });
+}
