@@ -41,7 +41,6 @@ function showMovieList(movies) {
 
 
 // 필요한 변수들 선언하기
-const Cardlist = document.querySelectorAll('.movieList'); // 영화 리스트 지정
 const searchInput = document.getElementById('searchInput'); // 인풋창 지정
 const word = document.querySelector('.movieTitle');
 // 검색 인풋창 입력 시 이벤트 리스너 추가
@@ -49,7 +48,7 @@ searchInput.addEventListener('input', function () {
     const searchVal = searchInput.value.trim().toLowerCase(); // 밸류를 공백을 제거하고 소문자로 변환함
     const filter = filters(searchVal); // 필터 해주는 변수 선언 
 });
-console.log("검색 이벤트리스너 부분 문제 없음")
+console.log("검색 이벤트리스너 부분 문제 없음") // 여기까진 문제 없는 듯?
 
 // 필터 함수 구현
 function filters(searchVal) {
